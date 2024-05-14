@@ -1,5 +1,5 @@
 # SimpleTranslator
-
+There were issues with our code, so we created this new repository which doesn't have the full commit history. We promise that we all worked equally hard on this project. Here is the other half of the work: [https://github.com/1985lxw/SimpleTranslator](https://github.com/1985lxw/SimpleTranslator).
 SimpleTranslator is a comprehensive web application that facilitates text translation between different languages. It features a translation service, a history tracking system, and an engaging matching game that uses translations. The client-side handles user interactions, displaying translations, and the matching game, while the server-side manages translation requests, history storage, and language data.
 
 
