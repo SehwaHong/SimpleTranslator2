@@ -3,7 +3,14 @@
  */
  document.addEventListener('DOMContentLoaded', () => {
     fetchHistory();
+
+    // Add event listener for the clear history button
+    document.getElementsByClassName('clear-hist-btn')[0].addEventListener('click', () => {
+        clearHistoryDOM();
+    });
 });
+
+
 
 /**
  * Fetches history data from the backend server and updates the DOM with history entries or a message if no history is available.
@@ -54,5 +61,20 @@ function updateHistoryDOM(historyData) {
  */
 function updateHistoryDOMEmpty() {
     const container = document.querySelector('.history-box-container');
-    container.innerHTML = '<p class="centered-message">No history available yet</p>';
+    container.innerHTML = '<h1 class="centered-message">No history available yet</h1>';
 }
+
+function clearHistoryDOM() {
+    try {
+        const response = fetch('/clear', { method: 'DELETE' });
+
+        if (!response.ok) {
+            throw new Error('Failed to clear history');
+        }
+    }
+    catch (error) {
+        console.error('There was a problem with clearing history', error);
+    }
+
+}
+
