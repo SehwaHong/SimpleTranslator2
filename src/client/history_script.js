@@ -71,6 +71,8 @@ function clearHistoryDOM() {
         if (!response.ok) {
             throw new Error('Failed to clear history');
         }
+
+        updateHistoryDOMEmpty();
     }
     catch (error) {
         console.error('There was a problem with clearing history', error);
