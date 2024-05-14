@@ -88,7 +88,8 @@ body {
 }
 
 .title{
-  margin-bottom: 20px;
+  margin-top:20px;
+  margin-bottom: 70px;
   font-size: 50px;
   color: pink;
   text-align: center;
@@ -141,6 +142,7 @@ body {
 
 .input-output-container {
   display: flex;
+  width: 100%;
 }
 
 .translator-input,
@@ -162,9 +164,35 @@ body {
   position: relative;
 }
 
+#output-textbox,#input-textbox {
+  width: 400px;
+  height:150px;
+  font-size: large;
+  /* text-align: center; */
+  border: none;
+}
+
+#output-textbox {
+  margin-left: 10px;
+
+}
+
+#save-translation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#save-translation-button {
+  height: 30px;
+
+  text-align: center;
+}
+
 .translator-input {
   margin-left: 10px;
-  margin-right: 10px; /* Add some spacing between the text areas */
+  /* margin-right: 10px; Add some spacing between the text areas */
   border-right: 1px solid #c7c7c7;
 }
 
